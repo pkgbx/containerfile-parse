@@ -1,0 +1,8 @@
+FROM registry.fedoraproject.org/fedora:40
+
+RUN dnf install -y make gcc
+
+RUN make build
+
+# @org.pkgbox.artifact=true
+RUN make install
